@@ -1,0 +1,50 @@
+{
+    "paths": [
+      {
+        "title": "Frontend Development",
+        "stages": [
+          {
+            "title": "Fundamentals",
+            "topics": [
+              "HTML5",
+              "CSS3",
+              "JavaScript Basics",
+              "Git & GitHub"
+            ]
+          },
+          {
+            "title": "Frontend Frameworks",
+            "topics": [
+              "React.js",
+              "State Management",
+              "API Integration",
+              "Responsive Design"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Backend Development",
+        "stages": [
+          {
+            "title": "Basics",
+            "topics": [
+              "Node.js Fundamentals",
+              "Express.js",
+              "RESTful APIs",
+              "Database Basics"
+            ]
+          },
+          {
+            "title": "Advanced",
+            "topics": [
+              "Authentication",
+              "Authorization",
+              "API Security",
+              "Database Design"
+            ]
+          }
+        ]
+      }
+    ]
+  }

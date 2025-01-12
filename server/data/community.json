@@ -1,0 +1,34 @@
+{
+    "platforms": [
+      {
+        "name": "Discord Communities",
+        "communities": [
+          {
+            "name": "React Developers",
+            "description": "A community for React developers to discuss, learn, and share knowledge.",
+            "link": "https://discord.gg/react"
+          },
+          {
+            "name": "Node.js Community",
+            "description": "Connect with Node.js developers and get help with your projects.",
+            "link": "https://discord.gg/nodejs"
+          }
+        ]
+      },
+      {
+        "name": "Reddit Communities",
+        "communities": [
+          {
+            "name": "r/webdev",
+            "description": "Discussion and sharing of web development resources and experiences.",
+            "link": "https://reddit.com/r/webdev"
+          },
+          {
+            "name": "r/learnprogramming",
+            "description": "A supportive community for beginners learning to code.",
+            "link": "https://reddit.com/r/learnprogramming"
+          }
+        ]
+      }
+    ]
+  }

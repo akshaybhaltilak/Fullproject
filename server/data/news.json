@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Latest Developments in AI",
+      "description": "Recent breakthroughs in artificial intelligence and their impact on software development.",
+      "source": "Tech Daily",
+      "date": "2024-01-10",
+      "url": "https://example.com/ai-news"
+    },
+    {
+      "title": "Web Development Trends 2024",
+      "description": "Exploring the most important web development trends for the coming year.",
+      "source": "Web Dev Weekly",
+      "date": "2024-01-09",
+      "url": "https://example.com/webdev-trends"
+    }
+  ]

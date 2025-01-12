@@ -1,0 +1,44 @@
+{
+    "title": "WebReich",
+    "slogan": "Code with Cutting Edge Tech and Like Minds",
+    "mission": "WebReich is revolutionizing tech education in India through AI-powered learning solutions. We bridge the gap between traditional education and industry demands by providing personalized, structured learning paths and fostering a vibrant community of innovators.",
+    "aiFeatures": "Our AI-driven platform analyzes your learning style, progress, and goals to create personalized learning paths. Get smart recommendations for courses, mentors, and resources that align with your career objectives. Experience adaptive learning that evolves with your growth.",
+    "features": [
+      {
+        "title": "AI-Powered Personalization",
+        "description": "Experience tailored learning paths and resource recommendations powered by advanced AI algorithms.",
+        "icon": "🤖"
+      },
+      {
+        "title": "Expert Mentorship",
+        "description": "Connect with industry professionals and receive guidance from experienced mentors in your chosen field.",
+        "icon": "👨‍🏫"
+      },
+      {
+        "title": "Community Learning",
+        "description": "Join a thriving community of learners, participate in code reviews, and collaborate on real projects.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Structured Roadmaps",
+        "description": "Follow clear, industry-aligned learning paths from basics to advanced topics in various tech domains.",
+        "icon": "🗺️"
+      },
+      {
+        "title": "Real-world Projects",
+        "description": "Build your portfolio with hands-on projects that simulate real industry challenges.",
+        "icon": "💼"
+      },
+      {
+        "title": "Emerging Tech Focus",
+        "description": "Stay ahead with dedicated tracks for AI, blockchain, cloud computing, and other cutting-edge technologies.",
+        "icon": "🚀"
+      }
+    ],
+    "stats": {
+      "activeUsers": "10,000+",
+      "coursesCompleted": "50,000+",
+      "mentors": "200+",
+      "satisfaction": "98%"
+    }
+  }
