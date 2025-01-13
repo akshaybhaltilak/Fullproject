@@ -9,6 +9,11 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 
+// Root Route
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
 // API Routes
 app.get('/api/home', async (req, res) => {
   try {
@@ -46,6 +51,7 @@ app.get('/api/community', async (req, res) => {
   }
 });
 
+// Start the Server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
