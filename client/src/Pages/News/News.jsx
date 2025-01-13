@@ -21,7 +21,7 @@ const News = () => {
   // Static fallback data
   const staticPosts = [
     {
-      title: "Latest Developments in AI",
+      title: `<a href="https://example.com/ai-news" target="_blank">Latest Developments in AI</a>`,
       description: "Recent breakthroughs in artificial intelligence and their impact on software development.",
       source: { name: "Tech Daily" },
       author: "Tech Daily Staff",
@@ -30,7 +30,7 @@ const News = () => {
       urlToImage: null
     },
     {
-      title: "Web Development Trends 2024",
+      title: `<a href="https://example.com/webdev-trends" target="_blank">Web Development Trends 2024</a>`,
       description: "Exploring the most important web development trends for the coming year.",
       source: { name: "Web Dev Weekly" },
       author: "Web Dev Weekly Team",
