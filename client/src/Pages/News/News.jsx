@@ -18,6 +18,28 @@ const News = () => {
   const [page, setPage] = useState(1);
   const API_KEY = 'f37970e85a6747adb801eaf008108a57'; // Replace with your News API key
 
+  // Static fallback data
+  const staticPosts = [
+    {
+      title: "Latest Developments in AI",
+      description: "Recent breakthroughs in artificial intelligence and their impact on software development.",
+      source: { name: "Tech Daily" },
+      author: "Tech Daily Staff",
+      publishedAt: "2024-01-10",
+      url: "https://example.com/ai-news",
+      urlToImage: null
+    },
+    {
+      title: "Web Development Trends 2024",
+      description: "Exploring the most important web development trends for the coming year.",
+      source: { name: "Web Dev Weekly" },
+      author: "Web Dev Weekly Team",
+      publishedAt: "2024-01-09",
+      url: "https://example.com/webdev-trends",
+      urlToImage: null
+    }
+  ];
+
   const tabs = [
     { id: 'news', label: 'Learn', icon: BookOpen },
     { id: 'community', label: 'Community', icon: Users },
@@ -45,11 +67,16 @@ const News = () => {
         `https://newsapi.org/v2/everything?q=technology&language=en&pageSize=10&page=${page}&apiKey=${API_KEY}`
       );
       const data = await response.json();
-      if (data.articles) {
+      if (data.articles && data.articles.length > 0) {
         setPosts((prev) => (page === 1 ? data.articles : [...prev, ...data.articles]));
+      } else {
+        // Fallback to static data if API fails or returns no results
+        setPosts((prev) => (page === 1 ? staticPosts : [...prev, ...staticPosts]));
       }
     } catch (error) {
       console.error('Error fetching news:', error);
+      // Use static data as fallback
+      setPosts((prev) => (page === 1 ? staticPosts : [...prev, ...staticPosts]));
     } finally {
       setLoading(false);
     }
@@ -58,6 +85,29 @@ const News = () => {
   return (
     <div className="min-h-screen bg-black text-gray-100">
       {/* Navigation Tabs */}
+      <nav className="bg-gray-900 sticky top-0 z-10">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="flex justify-between overflow-x-auto">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center space-x-2 py-4 px-4 border-b-2 transition-colors whitespace-nowrap ${
+                    activeTab === tab.id
+                      ? 'border-orange-500 text-orange-500'
+                      : 'border-transparent text-gray-400 hover:text-gray-200'
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                  <span className="text-sm font-medium">{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
 
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-4 py-6">
@@ -96,7 +146,7 @@ const News = () => {
                       <span className="mx-2 text-gray-600">·</span>
                       <span className="text-orange-500">{post.source.name}</span>
                     </div>
-                    <div className="text-xs text-gray-400 flex items-center">
+                    <div className="text-xs text-gray-400">
                       {new Date(post.publishedAt).toLocaleDateString()}
                     </div>
                   </div>
@@ -146,7 +196,6 @@ const News = () => {
                     </a>
                   </div>
                 </div>
-
               </div>
             </article>
           ))}
